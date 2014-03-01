@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="10">
+        <file>
+            <url>protected/views/sightseen/_form.php</url>
+            <bookmark id="6">
+                <name/>
+                <line>106</line>
+                <key/>
+            </bookmark>
+            <bookmark id="9">
+                <name/>
+                <line>185</line>
+                <key/>
+            </bookmark>
+            <bookmark id="10">
+                <name/>
+                <line>228</line>
+                <key/>
+            </bookmark>
+            <bookmark id="8">
+                <name/>
+                <line>376</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>protected/views/rptMovement/view.php</url>
+            <bookmark id="1">
+                <name/>
+                <line>253</line>
+                <key/>
+            </bookmark>
+            <bookmark id="2">
+                <name/>
+                <line>358</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>protected/views/rptMovement/viewtransport.php</url>
+            <bookmark id="5">
+                <name/>
+                <line>204</line>
+                <key/>
+            </bookmark>
+            <bookmark id="4">
+                <name/>
+                <line>231</line>
+                <key/>
+            </bookmark>
+            <bookmark id="3">
+                <name/>
+                <line>358</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group/>
+    </open-files>
+</project-private>

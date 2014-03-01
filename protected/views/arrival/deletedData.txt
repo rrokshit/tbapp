@@ -1,0 +1,143 @@
+
+            <div class="form-row control-group row-fluid" id="A_to" style="display:none">
+                <label class="control-label span3">To</label>
+                <div class="controls span7">
+					<?php echo $form->dropDownList($model, 'at', array('1' => 'Agra')); ?> 
+                </div>
+            </div>
+			
+			<?php
+    if(Yii::app()->controller->action->id=='update'){
+        if($model->arrival=='Train'){
+            ?>
+            $.post('<?php echo $this->createUrl('//entries/getTrainFlightNumber'); ?>', {val: <?php echo $model->train_name?>, type: 'Train', selVal: <?php echo $model->train_flight_no?> }, function(data) {
+                $("#Arrival_train_flight_no").html(data);
+            });    
+            <?php
+        }
+    }
+    ?>
+
+    <?php
+    if(Yii::app()->controller->action->id=='update'){
+        if($model->arrival=='Flight'){
+            ?>
+            $.post('<?php echo $this->createUrl('//entries/getTrainFlightNumber'); ?>', {val: <?php echo $model->flight_name?>, type: 'Flight', selVal: <?php echo $model->train_flight_no?> }, function(data) {
+                $("#Arrival_train_flight_no").html(data);
+            });    
+            <?php
+        }
+    }
+    ?>
+
+    <?php
+    if(Yii::app()->controller->action->id=='update'){
+        if($model->arrival=='Bus'){?>
+            $.post('<?php echo $this->createUrl('//entries/getFrom'); ?>', {val: <?php echo $model->bus_name?>, type: '<?php echo $model->arrival?>', selVal: <?php echo $model->from?>}, function(data) {
+                $("#Arrival_from").html(data);
+            });
+        <?php }
+    }
+    ?>
+
+
+    <?php
+    if(Yii::app()->controller->action->id=='update'){
+        if($model->arrival=='Train' or $model->arrival=='Flight'){?>
+            var arrival = $("#Arrival_arrival").val();
+            $.post('<?php echo $this->createUrl('//entries/getFrom'); ?>', {val: <?php echo $model->train_flight_no?>, type: arrival, selVal: <?php echo $model->from?>}, function(data) {
+                $("#Arrival_from").html(data);
+                //alert(data);
+            });
+        <?php }
+    }
+    ?>
+
+	
+	
+	//model
+	
+	public function getBranchname($branchId) {
+        if ($branchId != '') {
+            $branchIds = explode(',', $branchId);
+            $val = '';
+            foreach ($branchIds as $branch) {
+                $val .= DriverMaster::model()->findByPk($branch)->driver_name . ', ';
+            }
+            return rtrim($val, ', ');
+        } else {
+            return '';
+        }
+        //return $branchId;
+    }
+
+    public function getBranchname1($branchId) {
+        if ($branchId != '') {
+            $branchIds = explode(',', $branchId);
+            $val = '';
+            foreach ($branchIds as $branch) {
+                $val .= VehicleMaster::model()->findByPk($branch)->vehicle_name . ', ';
+            }
+            return rtrim($val, ', ');
+        } else {
+            return '';
+        }
+        //return $branchId;
+    }
+    
+    public function getDriverName($pnr_no,$outsideDriver){
+        if($outsideDriver!='')
+            return $outsideDriver;
+        else{
+            $vehicle = ArrivalVehicle::model()->find("pnr_no='".$pnr_no."' and type='Arrival'");
+            return DriverMaster::model()->findByPk($vehicle->driverName)->driver_name;
+        }
+    }
+    
+    public function getDriverMobileNo($pnr_no,$omob){
+        if($omob!='')
+            return $omob;
+        else{
+            $vehicle = ArrivalVehicle::model()->find("pnr_no='".$pnr_no."' and type='Arrival'");
+            return $vehicle->driverMobile;
+        }
+    }
+    
+    public function getArrivalDateField($pnr,$id){
+        return '<input type="text" id="Arrival_arrival_date_'.$id.'" name="Arrival[arrival_date][]" value="'.date("d-m-Y",strtotime(Entries::model()->find("pnr_no=$pnr")->arrival_date)).'" style="width:90px">';
+    }
+    
+    public function getArrivalTimeField($time){
+        //return '<input type="text" id="Arrival_arrival_date_'.$id.'" name="Arrival[arrival_date]" style="width:90px"><a href=javascript:NewCal("Arrival_arrival_date_'.$id.'","ddmmmyyyy")><img src="'.Yii::app()->theme->baseurl .'/img/calender.png"></a>';
+        
+        $hh=array();
+        $mm=array();
+        for($i=0;$i<=23;$i++){
+            $i=str_pad($i,2,'0',STR_PAD_LEFT);
+            $hh[$i]=$i;
+        }
+        for($i=1;$i<=60;$i++){
+            $i=str_pad($i,2,'0',STR_PAD_LEFT);
+            $mm[$i]=$i;
+        }
+        
+        $time = explode(':',$time);
+        
+        return CHtml::dropDownList('Arrival[hh][]', $time[0], $hh,array('empty' => 'HH','style'=>'width:66px')).CHtml::dropDownList('Arrival[mm][]', $time[1], $mm, array('empty' => 'MM','style'=>'width:66px'));
+        
+    }
+    
+    function getFrom($arrival,$surface_location,$from){
+        if($arrival=='Surface')
+            return $surface_location;
+        else{
+            return FromMaster::model()->findByPk($from)->name;
+        }
+    }
+    
+    function getDepartureDate($pnr_no){
+        if($dep = FromDeparture::model()->find("pnr_no=$pnr_no"))
+            return date("Y-m-d",strtotime($dep->dep_date));
+        else
+            return '';
+    }

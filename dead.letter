@@ -1,0 +1,1329 @@
+Date: Mon, 09 Sep 2013 17:48:23 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 4543 (/usr/sbin/smbd).
+
+This means there was a problem with the program, such as a segfault.
+Below is a backtrace for this process generated with gdb, which shows
+the state of the program at the time the error occurred.  The Samba log
+files may contain additional information about the problem.
+
+If the problem persists, you are encouraged to first install the
+samba-dbg package, which contains the debugging symbols for the Samba
+binaries.  Then submit the provided information as a bug report to
+Ubuntu by visiting this link:
+https://launchpad.net/ubuntu/+source/samba/+filebug
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f4aafbd244e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007f4aafbd244e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007f4aafb5829e in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007f4ab2fa8c5c in smb_panic ()
+#3  0x00007f4ab2f99ef8 in ?? ()
+#4  <signal handler called>
+#5  0x00007f4aafc75bf1 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#6  0x00007f4ab2f7ec7e in rep_strlcpy ()
+#7  0x00007f4ab2fb54d4 in connections_fetch_entry ()
+#8  0x00007f4ab2c9710c in yield_connection ()
+#9  0x00007f4ab2d0bff3 in close_cnum ()
+#10 0x00007f4ab2c9dde4 in conn_close_all ()
+#11 0x00007f4ab3216985 in ?? ()
+#12 0x00007f4ab3216d2e in exit_server_cleanly ()
+#13 0x00007f4ab2d078b9 in ?? ()
+#14 0x00007f4ab2fb891e in run_events_poll ()
+#15 0x00007f4ab2d08f72 in smbd_process ()
+#16 0x00007f4ab321678f in ?? ()
+#17 0x00007f4ab2fb891e in run_events_poll ()
+#18 0x00007f4ab2fb8aba in ?? ()
+#19 0x00007f4ab2fb9640 in _tevent_loop_once ()
+#20 0x00007f4ab2c87060 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 4543] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+Date: Mon, 09 Sep 2013 21:59:07 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 6827 (/usr/sbin/smbd).
+
+This means there was a problem with the program, such as a segfault.
+Below is a backtrace for this process generated with gdb, which shows
+the state of the program at the time the error occurred.  The Samba log
+files may contain additional information about the problem.
+
+If the problem persists, you are encouraged to first install the
+samba-dbg package, which contains the debugging symbols for the Samba
+binaries.  Then submit the provided information as a bug report to
+Ubuntu by visiting this link:
+https://launchpad.net/ubuntu/+source/samba/+filebug
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f4aafbd244e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007f4aafbd244e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007f4aafb5829e in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007f4ab2fa8c5c in smb_panic ()
+#3  0x00007f4ab2f99ef8 in ?? ()
+#4  <signal handler called>
+#5  0x00007f4aafc75bf1 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#6  0x00007f4ab2f7ec7e in rep_strlcpy ()
+#7  0x00007f4ab2fb54d4 in connections_fetch_entry ()
+#8  0x00007f4ab2c9710c in yield_connection ()
+#9  0x00007f4ab2d0bff3 in close_cnum ()
+#10 0x00007f4ab2c9dde4 in conn_close_all ()
+#11 0x00007f4ab3216985 in ?? ()
+#12 0x00007f4ab3216d2e in exit_server_cleanly ()
+#13 0x00007f4ab2d078b9 in ?? ()
+#14 0x00007f4ab2fb891e in run_events_poll ()
+#15 0x00007f4ab2d08f72 in smbd_process ()
+#16 0x00007f4ab321678f in ?? ()
+#17 0x00007f4ab2fb891e in run_events_poll ()
+#18 0x00007f4ab2fb8aba in ?? ()
+#19 0x00007f4ab2fb9640 in _tevent_loop_once ()
+#20 0x00007f4ab2c87060 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 6827] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+Date: Sat, 14 Sep 2013 13:30:28 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 13049 (/usr/sbin/smbd).
+
+This means there was a problem with the program, such as a segfault.
+Below is a backtrace for this process generated with gdb, which shows
+the state of the program at the time the error occurred.  The Samba log
+files may contain additional information about the problem.
+
+If the problem persists, you are encouraged to first install the
+samba-dbg package, which contains the debugging symbols for the Samba
+binaries.  Then submit the provided information as a bug report to
+Ubuntu by visiting this link:
+https://launchpad.net/ubuntu/+source/samba/+filebug
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007fa44179c44e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007fa44179c44e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007fa44172229e in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007fa444b72c5c in smb_panic ()
+#3  0x00007fa444b63ef8 in ?? ()
+#4  <signal handler called>
+#5  0x00007fa44183fbf1 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#6  0x00007fa444b48c7e in rep_strlcpy ()
+#7  0x00007fa444b7f4d4 in connections_fetch_entry ()
+#8  0x00007fa44486110c in yield_connection ()
+#9  0x00007fa4448d5ff3 in close_cnum ()
+#10 0x00007fa444867de4 in conn_close_all ()
+#11 0x00007fa444de0985 in ?? ()
+#12 0x00007fa444de0d2e in exit_server_cleanly ()
+#13 0x00007fa4448d18b9 in ?? ()
+#14 0x00007fa444b8291e in run_events_poll ()
+#15 0x00007fa4448d2f72 in smbd_process ()
+#16 0x00007fa444de078f in ?? ()
+#17 0x00007fa444b8291e in run_events_poll ()
+#18 0x00007fa444b82aba in ?? ()
+#19 0x00007fa444b83640 in _tevent_loop_once ()
+#20 0x00007fa444851060 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 13049] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+Date: Thu, 19 Sep 2013 17:51:28 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 16123 (/usr/sbin/smbd).
+
+This means there was a problem with the program, such as a segfault.
+Below is a backtrace for this process generated with gdb, which shows
+the state of the program at the time the error occurred.  The Samba log
+files may contain additional information about the problem.
+
+If the problem persists, you are encouraged to first install the
+samba-dbg package, which contains the debugging symbols for the Samba
+binaries.  Then submit the provided information as a bug report to
+Ubuntu by visiting this link:
+https://launchpad.net/ubuntu/+source/samba/+filebug
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f310532244e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007f310532244e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007f31052a829e in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007f31086f8c5c in smb_panic ()
+#3  0x00007f31086e9ef8 in ?? ()
+#4  <signal handler called>
+#5  0x00007f31053c5bf1 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#6  0x00007f31086cec7e in rep_strlcpy ()
+#7  0x00007f31087054d4 in connections_fetch_entry ()
+#8  0x00007f31083e710c in yield_connection ()
+#9  0x00007f310845bff3 in close_cnum ()
+#10 0x00007f31083edde4 in conn_close_all ()
+#11 0x00007f3108966985 in ?? ()
+#12 0x00007f3108966d2e in exit_server_cleanly ()
+#13 0x00007f31084578b9 in ?? ()
+#14 0x00007f310870891e in run_events_poll ()
+#15 0x00007f3108458f72 in smbd_process ()
+#16 0x00007f310896678f in ?? ()
+#17 0x00007f310870891e in run_events_poll ()
+#18 0x00007f3108708aba in ?? ()
+#19 0x00007f3108709640 in _tevent_loop_once ()
+#20 0x00007f31083d7060 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 16123] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+Date: Thu, 19 Sep 2013 21:11:07 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 17933 (/usr/sbin/smbd).
+
+This means there was a problem with the program, such as a segfault.
+Below is a backtrace for this process generated with gdb, which shows
+the state of the program at the time the error occurred.  The Samba log
+files may contain additional information about the problem.
+
+If the problem persists, you are encouraged to first install the
+samba-dbg package, which contains the debugging symbols for the Samba
+binaries.  Then submit the provided information as a bug report to
+Ubuntu by visiting this link:
+https://launchpad.net/ubuntu/+source/samba/+filebug
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f310532244e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007f310532244e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007f31052a829e in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007f31086f8c5c in smb_panic ()
+#3  0x00007f31086e9ef8 in ?? ()
+#4  <signal handler called>
+#5  0x00007f31053c5bf1 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#6  0x00007f31086cec7e in rep_strlcpy ()
+#7  0x00007f31087054d4 in connections_fetch_entry ()
+#8  0x00007f31083e710c in yield_connection ()
+#9  0x00007f310845bff3 in close_cnum ()
+#10 0x00007f31083edde4 in conn_close_all ()
+#11 0x00007f3108966985 in ?? ()
+#12 0x00007f3108966d2e in exit_server_cleanly ()
+#13 0x00007f31084578b9 in ?? ()
+#14 0x00007f310870891e in run_events_poll ()
+#15 0x00007f3108458f72 in smbd_process ()
+#16 0x00007f310896678f in ?? ()
+#17 0x00007f310870891e in run_events_poll ()
+#18 0x00007f3108708aba in ?? ()
+#19 0x00007f3108709640 in _tevent_loop_once ()
+#20 0x00007f31083d7060 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 17933] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+Date: Fri, 20 Sep 2013 15:15:34 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 18569 (/usr/sbin/smbd).
+
+This means there was a problem with the program, such as a segfault.
+Below is a backtrace for this process generated with gdb, which shows
+the state of the program at the time the error occurred.  The Samba log
+files may contain additional information about the problem.
+
+If the problem persists, you are encouraged to first install the
+samba-dbg package, which contains the debugging symbols for the Samba
+binaries.  Then submit the provided information as a bug report to
+Ubuntu by visiting this link:
+https://launchpad.net/ubuntu/+source/samba/+filebug
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f310532244e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007f310532244e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007f31052a829e in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007f31086f8c5c in smb_panic ()
+#3  0x00007f31086e9ef8 in ?? ()
+#4  <signal handler called>
+#5  0x00007f31053c5bf1 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#6  0x00007f31086cec7e in rep_strlcpy ()
+#7  0x00007f31087054d4 in connections_fetch_entry ()
+#8  0x00007f31083e710c in yield_connection ()
+#9  0x00007f310845bff3 in close_cnum ()
+#10 0x00007f31083edde4 in conn_close_all ()
+#11 0x00007f3108966985 in ?? ()
+#12 0x00007f3108966d2e in exit_server_cleanly ()
+#13 0x00007f31084534c0 in ?? ()
+#14 0x00007f310870ae8a in tevent_common_check_signal ()
+#15 0x00007f31087085f5 in run_events_poll ()
+#16 0x00007f3108458eec in smbd_process ()
+#17 0x00007f310896678f in ?? ()
+#18 0x00007f310870891e in run_events_poll ()
+#19 0x00007f3108708aba in ?? ()
+#20 0x00007f3108709640 in _tevent_loop_once ()
+#21 0x00007f31083d7060 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 18569] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+Date: Fri, 20 Sep 2013 16:12:31 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 4086 (/usr/sbin/smbd).
+
+This means there was a problem with the program, such as a segfault.
+Below is a backtrace for this process generated with gdb, which shows
+the state of the program at the time the error occurred.  The Samba log
+files may contain additional information about the problem.
+
+If the problem persists, you are encouraged to first install the
+samba-dbg package, which contains the debugging symbols for the Samba
+binaries.  Then submit the provided information as a bug report to
+Ubuntu by visiting this link:
+https://launchpad.net/ubuntu/+source/samba/+filebug
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f4944be844e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007f4944be844e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007f4944b6e29e in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007f4947fbec5c in smb_panic ()
+#3  0x00007f4947fafef8 in ?? ()
+#4  <signal handler called>
+#5  0x00007f4944c8bbf1 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#6  0x00007f4947f94c7e in rep_strlcpy ()
+#7  0x00007f4947fcb4d4 in connections_fetch_entry ()
+#8  0x00007f4947cad10c in yield_connection ()
+#9  0x00007f4947d21ff3 in close_cnum ()
+#10 0x00007f4947cb3de4 in conn_close_all ()
+#11 0x00007f494822c985 in ?? ()
+#12 0x00007f494822cd2e in exit_server_cleanly ()
+#13 0x00007f4947d1d8b9 in ?? ()
+#14 0x00007f4947fce91e in run_events_poll ()
+#15 0x00007f4947d1ef72 in smbd_process ()
+#16 0x00007f494822c78f in ?? ()
+#17 0x00007f4947fce91e in run_events_poll ()
+#18 0x00007f4947fceaba in ?? ()
+#19 0x00007f4947fcf640 in _tevent_loop_once ()
+#20 0x00007f4947c9d060 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 4086] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+Date: Fri, 20 Sep 2013 23:56:49 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 4546 (/usr/sbin/smbd).
+
+This means there was a problem with the program, such as a segfault.
+Below is a backtrace for this process generated with gdb, which shows
+the state of the program at the time the error occurred.  The Samba log
+files may contain additional information about the problem.
+
+If the problem persists, you are encouraged to first install the
+samba-dbg package, which contains the debugging symbols for the Samba
+binaries.  Then submit the provided information as a bug report to
+Ubuntu by visiting this link:
+https://launchpad.net/ubuntu/+source/samba/+filebug
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f4944be844e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007f4944be844e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007f4944b6e29e in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007f4947fbec5c in smb_panic ()
+#3  0x00007f4947fafef8 in ?? ()
+#4  <signal handler called>
+#5  0x00007f4944c8bbf1 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#6  0x00007f4947f94c7e in rep_strlcpy ()
+#7  0x00007f4947fcb4d4 in connections_fetch_entry ()
+#8  0x00007f4947cad10c in yield_connection ()
+#9  0x00007f4947d21ff3 in close_cnum ()
+#10 0x00007f4947cb3de4 in conn_close_all ()
+#11 0x00007f494822c985 in ?? ()
+#12 0x00007f494822cd2e in exit_server_cleanly ()
+#13 0x00007f4947d1d8b9 in ?? ()
+#14 0x00007f4947fce91e in run_events_poll ()
+#15 0x00007f4947d1ef72 in smbd_process ()
+#16 0x00007f494822c78f in ?? ()
+#17 0x00007f4947fce91e in run_events_poll ()
+#18 0x00007f4947fceaba in ?? ()
+#19 0x00007f4947fcf640 in _tevent_loop_once ()
+#20 0x00007f4947c9d060 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 4546] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+Date: Tue, 24 Sep 2013 20:02:54 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 29561 (/usr/sbin/smbd).
+
+This means there was a problem with the program, such as a segfault.
+Below is a backtrace for this process generated with gdb, which shows
+the state of the program at the time the error occurred.  The Samba log
+files may contain additional information about the problem.
+
+If the problem persists, you are encouraged to first install the
+samba-dbg package, which contains the debugging symbols for the Samba
+binaries.  Then submit the provided information as a bug report to
+Ubuntu by visiting this link:
+https://launchpad.net/ubuntu/+source/samba/+filebug
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007fc85a33744e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007fc85a33744e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007fc85a2bd29e in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007fc85d70dc5c in smb_panic ()
+#3  0x00007fc85d6feef8 in ?? ()
+#4  <signal handler called>
+#5  0x00007fc85a3dabf1 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#6  0x00007fc85d6e3c7e in rep_strlcpy ()
+#7  0x00007fc85d71a4d4 in connections_fetch_entry ()
+#8  0x00007fc85d3fc10c in yield_connection ()
+#9  0x00007fc85d470ff3 in close_cnum ()
+#10 0x00007fc85d402de4 in conn_close_all ()
+#11 0x00007fc85d97b985 in ?? ()
+#12 0x00007fc85d97bd2e in exit_server_cleanly ()
+#13 0x00007fc85d4684c0 in ?? ()
+#14 0x00007fc85d71fe8a in tevent_common_check_signal ()
+#15 0x00007fc85d71d5f5 in run_events_poll ()
+#16 0x00007fc85d46deec in smbd_process ()
+#17 0x00007fc85d97b78f in ?? ()
+#18 0x00007fc85d71d91e in run_events_poll ()
+#19 0x00007fc85d71daba in ?? ()
+#20 0x00007fc85d71e640 in _tevent_loop_once ()
+#21 0x00007fc85d3ec060 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 29561] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+Date: Wed, 25 Sep 2013 13:51:28 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 4115 (/usr/sbin/smbd).
+
+This means there was a problem with the program, such as a segfault.
+Below is a backtrace for this process generated with gdb, which shows
+the state of the program at the time the error occurred.  The Samba log
+files may contain additional information about the problem.
+
+If the problem persists, you are encouraged to first install the
+samba-dbg package, which contains the debugging symbols for the Samba
+binaries.  Then submit the provided information as a bug report to
+Ubuntu by visiting this link:
+https://launchpad.net/ubuntu/+source/samba/+filebug
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f1a584c144e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007f1a584c144e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007f1a5844729e in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007f1a5b897c5c in smb_panic ()
+#3  0x00007f1a5b888ef8 in ?? ()
+#4  <signal handler called>
+#5  0x00007f1a58564bf1 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#6  0x00007f1a5b86dc7e in rep_strlcpy ()
+#7  0x00007f1a5b8a44d4 in connections_fetch_entry ()
+#8  0x00007f1a5b58610c in yield_connection ()
+#9  0x00007f1a5b5faff3 in close_cnum ()
+#10 0x00007f1a5b58cde4 in conn_close_all ()
+#11 0x00007f1a5bb05985 in ?? ()
+#12 0x00007f1a5bb05d2e in exit_server_cleanly ()
+#13 0x00007f1a5b5f68b9 in ?? ()
+#14 0x00007f1a5b8a791e in run_events_poll ()
+#15 0x00007f1a5b5f7f72 in smbd_process ()
+#16 0x00007f1a5bb0578f in ?? ()
+#17 0x00007f1a5b8a791e in run_events_poll ()
+#18 0x00007f1a5b8a7aba in ?? ()
+#19 0x00007f1a5b8a8640 in _tevent_loop_once ()
+#20 0x00007f1a5b576060 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 4115] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+Date: Sat, 28 Sep 2013 13:09:09 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 14611 (/usr/sbin/smbd).
+
+This means there was a problem with the program, such as a segfault.
+Below is a backtrace for this process generated with gdb, which shows
+the state of the program at the time the error occurred.  The Samba log
+files may contain additional information about the problem.
+
+If the problem persists, you are encouraged to first install the
+samba-dbg package, which contains the debugging symbols for the Samba
+binaries.  Then submit the provided information as a bug report to
+Ubuntu by visiting this link:
+https://launchpad.net/ubuntu/+source/samba/+filebug
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f6d98fac44e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007f6d98fac44e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007f6d98f3229e in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007f6d9c382c5c in smb_panic ()
+#3  0x00007f6d9c373ef8 in ?? ()
+#4  <signal handler called>
+#5  0x00007f6d9904fbf1 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#6  0x00007f6d9c358c7e in rep_strlcpy ()
+#7  0x00007f6d9c38f4d4 in connections_fetch_entry ()
+#8  0x00007f6d9c07110c in yield_connection ()
+#9  0x00007f6d9c0e5ff3 in close_cnum ()
+#10 0x00007f6d9c09f31d in reply_tdis ()
+#11 0x00007f6d9c0e0fd4 in ?? ()
+#12 0x00007f6d9c0e13eb in ?? ()
+#13 0x00007f6d9c0e1803 in ?? ()
+#14 0x00007f6d9c39291e in run_events_poll ()
+#15 0x00007f6d9c0e2f72 in smbd_process ()
+#16 0x00007f6d9c5f078f in ?? ()
+#17 0x00007f6d9c39291e in run_events_poll ()
+#18 0x00007f6d9c392aba in ?? ()
+#19 0x00007f6d9c393640 in _tevent_loop_once ()
+#20 0x00007f6d9c061060 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 14611] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+Date: Tue, 01 Oct 2013 17:48:10 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 9718 (/usr/sbin/smbd).
+
+This means there was a problem with the program, such as a segfault.
+Below is a backtrace for this process generated with gdb, which shows
+the state of the program at the time the error occurred.  The Samba log
+files may contain additional information about the problem.
+
+If the problem persists, you are encouraged to first install the
+samba-dbg package, which contains the debugging symbols for the Samba
+binaries.  Then submit the provided information as a bug report to
+Ubuntu by visiting this link:
+https://launchpad.net/ubuntu/+source/samba/+filebug
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007fd62d8f944e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007fd62d8f944e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007fd62d87f29e in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007fd630ccfc5c in smb_panic ()
+#3  0x00007fd630cc0ef8 in ?? ()
+#4  <signal handler called>
+#5  0x00007fd62d99cbf1 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#6  0x00007fd630ca5c7e in rep_strlcpy ()
+#7  0x00007fd630cdc4d4 in connections_fetch_entry ()
+#8  0x00007fd6309be10c in yield_connection ()
+#9  0x00007fd630a32ff3 in close_cnum ()
+#10 0x00007fd6309ec31d in reply_tdis ()
+#11 0x00007fd630a2dfd4 in ?? ()
+#12 0x00007fd630a2e3eb in ?? ()
+#13 0x00007fd630a2e803 in ?? ()
+#14 0x00007fd630cdf91e in run_events_poll ()
+#15 0x00007fd630a2ff72 in smbd_process ()
+#16 0x00007fd630f3d78f in ?? ()
+#17 0x00007fd630cdf91e in run_events_poll ()
+#18 0x00007fd630cdfaba in ?? ()
+#19 0x00007fd630ce0640 in _tevent_loop_once ()
+#20 0x00007fd6309ae060 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 9718] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+Date: Thu, 03 Oct 2013 16:05:50 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 5980 (/usr/sbin/smbd).
+
+This means there was a problem with the program, such as a segfault.
+Below is a backtrace for this process generated with gdb, which shows
+the state of the program at the time the error occurred.  The Samba log
+files may contain additional information about the problem.
+
+If the problem persists, you are encouraged to first install the
+samba-dbg package, which contains the debugging symbols for the Samba
+binaries.  Then submit the provided information as a bug report to
+Ubuntu by visiting this link:
+https://launchpad.net/ubuntu/+source/samba/+filebug
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f4b1cfae44e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007f4b1cfae44e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007f4b1cf3429e in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007f4b20384c5c in smb_panic ()
+#3  0x00007f4b20375ef8 in ?? ()
+#4  <signal handler called>
+#5  0x00007f4b1d051bf1 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#6  0x00007f4b2035ac7e in rep_strlcpy ()
+#7  0x00007f4b203914d4 in connections_fetch_entry ()
+#8  0x00007f4b2007310c in yield_connection ()
+#9  0x00007f4b200e7ff3 in close_cnum ()
+#10 0x00007f4b20079de4 in conn_close_all ()
+#11 0x00007f4b205f2985 in ?? ()
+#12 0x00007f4b205f2d2e in exit_server_cleanly ()
+#13 0x00007f4b200e38b9 in ?? ()
+#14 0x00007f4b2039491e in run_events_poll ()
+#15 0x00007f4b200e4f72 in smbd_process ()
+#16 0x00007f4b205f278f in ?? ()
+#17 0x00007f4b2039491e in run_events_poll ()
+#18 0x00007f4b20394aba in ?? ()
+#19 0x00007f4b20395640 in _tevent_loop_once ()
+#20 0x00007f4b20063060 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 5980] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+Date: Thu, 03 Oct 2013 16:10:44 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 6168 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 6168.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:10:47 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 6342 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 6342.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:10:49 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 6350 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 6350.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:22:10 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 6358 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 6358.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:24:28 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 6448 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 6448.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:24:37 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 6479 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 6479.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:24:39 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 6487 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 6487.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:34:31 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 6798 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 6798.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:34:34 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 6843 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 6843.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:43:35 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 2596 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 2596.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:43:38 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 3190 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 3190.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:43:40 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 3200 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 3200.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:44:44 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 3208 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 3208.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:44:51 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 3222 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 3222.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:44:54 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 3234 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 3234.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:45:12 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 3242 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 3242.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:46:24 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 3304 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 3304.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:48:48 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 3547 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 3547.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:49:06 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 3712 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 3712.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:51:00 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 3724 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 3724.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:51:03 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 3757 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 3757.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 16:51:04 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 3766 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 3766.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 17:01:12 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 3774 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 3774.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 17:01:14 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 3978 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 3978.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 17:01:57 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 3986 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 3986.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 17:01:59 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 4003 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 4003.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Thu, 03 Oct 2013 17:11:34 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 4200 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 4200.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Fri, 04 Oct 2013 12:29:21 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 7766 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 7766.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Fri, 04 Oct 2013 12:29:24 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 7783 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 7783.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Fri, 04 Oct 2013 12:57:52 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 7791 (/usr/sbin/smbd).
+
+This means there was a problem with the program, such as a segfault.
+Below is a backtrace for this process generated with gdb, which shows
+the state of the program at the time the error occurred.  The Samba log
+files may contain additional information about the problem.
+
+If the problem persists, you are encouraged to first install the
+samba-dbg package, which contains the debugging symbols for the Samba
+binaries.  Then submit the provided information as a bug report to
+Ubuntu by visiting this link:
+https://launchpad.net/ubuntu/+source/samba/+filebug
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007fcab43ce44e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007fcab43ce44e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007fcab435429e in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007fcab77a4c5c in smb_panic ()
+#3  0x00007fcab7795ef8 in ?? ()
+#4  <signal handler called>
+#5  0x00007fcab4471bf1 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#6  0x00007fcab777ac7e in rep_strlcpy ()
+#7  0x00007fcab77b14d4 in connections_fetch_entry ()
+#8  0x00007fcab749310c in yield_connection ()
+#9  0x00007fcab7507ff3 in close_cnum ()
+#10 0x00007fcab74c131d in reply_tdis ()
+#11 0x00007fcab7502fd4 in ?? ()
+#12 0x00007fcab75033eb in ?? ()
+#13 0x00007fcab7503803 in ?? ()
+#14 0x00007fcab77b491e in run_events_poll ()
+#15 0x00007fcab7504f72 in smbd_process ()
+#16 0x00007fcab7a1278f in ?? ()
+#17 0x00007fcab77b491e in run_events_poll ()
+#18 0x00007fcab77b4aba in ?? ()
+#19 0x00007fcab77b5640 in _tevent_loop_once ()
+#20 0x00007fcab7483060 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 7791] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+Date: Fri, 04 Oct 2013 15:02:38 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 10542 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 10542.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Fri, 04 Oct 2013 15:02:39 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 10550 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 10550.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Fri, 04 Oct 2013 15:16:40 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 10558 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 10558.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Fri, 04 Oct 2013 15:16:40 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 10599 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 10599.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Fri, 04 Oct 2013 15:16:41 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 10607 ().
+
+This means there was a problem with the program, such as a segfault.
+However, the executable could not be found for process 10607.
+It may have died unexpectedly, or you may not have permission to debug
+the process.
+Date: Fri, 04 Oct 2013 17:11:42 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 10618 (/usr/sbin/smbd).
+
+This means there was a problem with the program, such as a segfault.
+Below is a backtrace for this process generated with gdb, which shows
+the state of the program at the time the error occurred.  The Samba log
+files may contain additional information about the problem.
+
+If the problem persists, you are encouraged to first install the
+samba-dbg package, which contains the debugging symbols for the Samba
+binaries.  Then submit the provided information as a bug report to
+Ubuntu by visiting this link:
+https://launchpad.net/ubuntu/+source/samba/+filebug
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007fcab43ce44e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007fcab43ce44e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007fcab435429e in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007fcab77a4c5c in smb_panic ()
+#3  0x00007fcab7795ef8 in ?? ()
+#4  <signal handler called>
+#5  0x00007fcab4471bf1 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#6  0x00007fcab777ac7e in rep_strlcpy ()
+#7  0x00007fcab77b14d4 in connections_fetch_entry ()
+#8  0x00007fcab749310c in yield_connection ()
+#9  0x00007fcab7507ff3 in close_cnum ()
+#10 0x00007fcab7499de4 in conn_close_all ()
+#11 0x00007fcab7a12985 in ?? ()
+#12 0x00007fcab7a12d2e in exit_server_cleanly ()
+#13 0x00007fcab74ff4c0 in ?? ()
+#14 0x00007fcab77b6e8a in tevent_common_check_signal ()
+#15 0x00007fcab77b45f5 in run_events_poll ()
+#16 0x00007fcab7504eec in smbd_process ()
+#17 0x00007fcab7a1278f in ?? ()
+#18 0x00007fcab77b491e in run_events_poll ()
+#19 0x00007fcab77b4aba in ?? ()
+#20 0x00007fcab77b5640 in _tevent_loop_once ()
+#21 0x00007fcab7483060 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 10618] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+Date: Sat, 05 Oct 2013 18:05:07 +0530
+To: root
+Subject: Panic or segfault in Samba
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+The Samba 'panic action' script, /usr/share/samba/panic-action,
+was called for PID 8673 (/usr/sbin/smbd).
+
+This means there was a problem with the program, such as a segfault.
+Below is a backtrace for this process generated with gdb, which shows
+the state of the program at the time the error occurred.  The Samba log
+files may contain additional information about the problem.
+
+If the problem persists, you are encouraged to first install the
+samba-dbg package, which contains the debugging symbols for the Samba
+binaries.  Then submit the provided information as a bug report to
+Ubuntu by visiting this link:
+https://launchpad.net/ubuntu/+source/samba/+filebug
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007fcafb88c44e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007fcafb88c44e in waitpid () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007fcafb81229e in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x00007fcafec62c5c in smb_panic ()
+#3  0x00007fcafec53ef8 in ?? ()
+#4  <signal handler called>
+#5  0x00007fcafb92fbf1 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#6  0x00007fcafec38c7e in rep_strlcpy ()
+#7  0x00007fcafec6f4d4 in connections_fetch_entry ()
+#8  0x00007fcafe95110c in yield_connection ()
+#9  0x00007fcafe9c5ff3 in close_cnum ()
+#10 0x00007fcafe97f31d in reply_tdis ()
+#11 0x00007fcafe9c0fd4 in ?? ()
+#12 0x00007fcafe9c13eb in ?? ()
+#13 0x00007fcafe9c1803 in ?? ()
+#14 0x00007fcafec7291e in run_events_poll ()
+#15 0x00007fcafe9c2f72 in smbd_process ()
+#16 0x00007fcafeed078f in ?? ()
+#17 0x00007fcafec7291e in run_events_poll ()
+#18 0x00007fcafec72aba in ?? ()
+#19 0x00007fcafec73640 in _tevent_loop_once ()
+#20 0x00007fcafe941060 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 8673] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

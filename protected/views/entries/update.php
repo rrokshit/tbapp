@@ -1,0 +1,1 @@
+<?php echo $this->renderPartial('_form', array('model'=>$model, 'agency_city'=>$agency_city )); ?>
